@@ -93,3 +93,6 @@ bmcRegex = re.compile(r'BMC.*IP:(.\S*).*Mac:(.\S*).*Fw:(.\S*).*')
 pprint.pprint(bmcRegex.findall(data))
 
 #for LAN I used (.*?)\s+ , and for BMC I used (.\S*).* . both do the same thing, but differently :/
+info('CPU')
+cpuRegex = re.compile(r'Model:(.*?)\s{2,}')
+pprint.pprint(cpuRegex.findall(data))

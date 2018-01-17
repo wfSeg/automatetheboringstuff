@@ -87,3 +87,27 @@ print(dotStar.search(prime))
 #it matches everything, except newline. To get newline, use re.DOTALL
 dotStar = re.compile(r'.*', re.DOTALL)
 print(dotStar.search(prime))
+
+#now we have replace feature
+namesRegex = re.compile(r'Agent \w+')
+mo = namesRegex.findall('Agent Alice gave the secret documents to Agent Bob')
+print(mo) #prints out Agents name
+# the re.sub method replaces text in B with those in A ('A', 'B')
+redacted = namesRegex.sub('REDACTED', 'Agent Alice gave the secret documents to Agent Bob')
+print(redacted)
+
+# (\w)\w* will only return ['A', 'B']
+namesRegex = re.compile(r'Agent (\w)\w*') # only has 1st initial
+# \1 <- will only show first part of matched string?
+redacted = namesRegex.sub(r'Agent \1****', 'Agent Alice gave the secret documents to Agent Bob')
+print(redacted)
+
+# Verbose format, it allows you to use ''' triple quotes to ident and comment within the regex!
+#easier to read
+re.compile(r'''
+	(\d\d\d-)| 		# area code
+	(\(\d\d\d\) )   # -or- area code with parens and no dash
+	\d\d\d    	# first 3 digits
+	-			# second dash
+	\d\d\d\d    # last 4 digits
+	\sx\d{2,4}  # extension, like x1234''', re.VERBOSE)
