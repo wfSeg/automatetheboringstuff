@@ -3,6 +3,22 @@
 	{
 		"selected_items":
 		[
+			[
+				"folder",
+				"folderName"
+			],
+			[
+				"get",
+				"getcwd"
+			],
+			[
+				"play",
+				"playlistFile"
+			],
+			[
+				"pla",
+				"playlistFile"
+			]
 		]
 	},
 	"buffers":
@@ -11,19 +27,53 @@
 			"file": "Readme.txt",
 			"settings":
 			{
-				"buffer_size": 1078,
+				"buffer_size": 1495,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "#! python\n\n#practice some regex with Real life data from work :|\n\nimport re\nimport pprint\n\ndata = '''================================================================================================================================\nBIOS    >> Mfr:American Megatrends Inc. Version:3.0a   Date:01/10/2018 Revision:5.6     Start:(01/10/18 17:31)\nSYSTEM  >> Mfr:Supermicro Name:Super Server     Ser:0123456789             Fmly:Default st SKU:Default st\nBOARD   >> Mfr:Supermicro Name:X10DRU-i+        Ser:OM15CS034412         ATag:Default string BID:0844 CPLD:nf.nf.nf SVR:platypus\nCHASSIS >> Mfr:Supermicro Type:Main Server Chas Ser:0123456789             ATag:Default string   GEO:SMC_US  \n--------------------------------------------------------------------------------------------------------------------------------\nCPU0    >> Mfr:Intel       Model:Xeon(R) CPU E5-2618L v4 @ 2.20GHz          Speed:2200  Cores:10  Threads:20 \nCPU1    >> Mfr:Intel       Model:Xeon(R) CPU E5-2618L v4 @ 2.20GHz          Speed:2200  Cores:10  Threads:20 \n--------------------------------------------------------------------------------------------------------------------------------\nDIMM0   >> P1-DIMMA1    dc:16/02          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:11700BC9   Mdl:36ASF4G72LZ-2G3A\nDIMM3   >> P1-DIMMB1    dc:16/02          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:11700C0A   Mdl:36ASF4G72LZ-2G3A\nDIMM6   >> P1-DIMMC1    dc:16/02          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:11700BCA   Mdl:36ASF4G72LZ-2G3A\nDIMM9   >> P1-DIMMD1    dc:16/02          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:11700B52   Mdl:36ASF4G72LZ-2G3A\nDIMM12  >> P2-DIMME1    dc:15/51          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:114641B7   Mdl:36ASF4G72LZ-2G3A\nDIMM15  >> P2-DIMMF1    dc:15/51          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:114641AC   Mdl:36ASF4G72LZ-2G3A\nDIMM18  >> P2-DIMMG1    dc:15/51          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:1146420D   Mdl:36ASF4G72LZ-2G3A\nDIMM21  >> P2-DIMMH1    dc:15/51          Sz:32    Typ:DDR4  Rnk:2 Spd:2400:2133 Mfr:Micron   #:114640E8   Mdl:36ASF4G72LZ-2G3A\n--------------------------------------------------------------------------------------------------------------------------------\nPCIE0   >> 00:01.0  Cap:Gen3 x8   Sta:Gen2 x8   Intel Corporation Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port \nPCIE1   >> 00:02.0  Cap:Gen3 x8   Sta:Gen2 x8   Intel Corporation Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port \nPCIE2   >> 00:1c.2  Cap:Gen2 x1   Sta:Gen1 x1   Intel Corporation C610/X99 series chipset PCI Express Root Port #3 (rev d5) (pro\nPCIE3   >> 01:00.0  Cap:Gen2 x8   Sta:Gen2 x8   Intel Corporation Ethernet Controller X540-AT2 (rev 01)                         \nPCIE4   >> 01:00.1  Cap:Gen2 x8   Sta:Gen2 x8   Intel Corporation Ethernet Controller X540-AT2 (rev 01)                         \nPCIE5   >> 02:00.0  Cap:Gen2 x8   Sta:Gen2 x8   Intel Corporation Ethernet Controller X540-AT2 (rev 01)                         \nPCIE6   >> 02:00.1  Cap:Gen2 x8   Sta:Gen2 x8   Intel Corporation Ethernet Controller X540-AT2 (rev 01)                         \nPCIE7   >> 05:00.0  Cap:Gen1 x1   Sta:Gen1 x1   ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 03) (prog-if 00 [Normal d\n--------------------------------------------------------------------------------------------------------------------------------\nHDD0    >> sda  Tp:ATA Spd:6.0  Mf:intel      Md:INTEL SSDSC2BX01     Sz:1.60TB Fw:0150  Bus:0:0:0:0    Ser:BTHC64030C5R1P6PGN  \nHDD1    >> sdb  Tp:ATA Spd:6.0  Mf:micron     Md:MICRON_M510DC_MT     Sz:960GB  Fw:0013  Bus:1:0:0:0    Ser:153511C58EAB        \nHDD2    >> sdc  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:2:0:0:0    Ser:W4608NBP            \nHDD3    >> sdd  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:3:0:0:0    Ser:W4609CX2            \nHDD4    >> sde  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:4:0:0:0    Ser:W4609L5M            \nHDD5    >> sdf  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:5:0:0:0    Ser:W46086GS            \nHDD6    >> sdg  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:6:0:0:0    Ser:W4609CJL            \nHDD7    >> sdh  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:7:0:0:0    Ser:W4608P2F            \nHDD8    >> sdi  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:8:0:0:0    Ser:W4609JZ8            \nHDD9    >> sdj  Tp:ATA Spd:6.0  Mf:seagate    Md:ST2000NX0253         Sz:2.00TB Fw:SN02  Bus:9:0:0:0    Ser:W4609H41            \n--------------------------------------------------------------------------------------------------------------------------------\nLAN0    >> eth0  IP:172.16.114.237  Mac:0c:c4:7a:a3:ff:e0 eep:0x800003e2            Bus:0000:01:00.0 Drv:ixgbe,5.2.1   Spd:10000\nLAN1    >> eth1  IP:172.16.114.236  Mac:0c:c4:7a:a3:ff:e1 eep:0x800003e2            Bus:0000:01:00.1 Drv:ixgbe,5.2.1   Spd:10000\nLAN2    >> eth2  IP:172.16.114.239  Mac:0c:c4:7a:a3:ff:e2 eep:0x800003e1            Bus:0000:02:00.0 Drv:ixgbe,5.2.1   Spd:10000\nLAN3    >> eth3  IP:172.16.114.238  Mac:0c:c4:7a:a3:ff:e3 eep:0x800003e1            Bus:0000:02:00.1 Drv:ixgbe,5.2.1   Spd:10000\n--------------------------------------------------------------------------------------------------------------------------------\nBMC     >>  IP:172.16.102.159   Mac:0c:c4:7a:67:b0:7e  Id:ASPEED     Fw:3.65           | CL:0.66.1 CS:5.26   CF:0.24   |\nBMC_PRO >> Mfr:Supermicro  Name:              Part:SYS-1028U-TR4T+  Ser:S16746326435213         ATag:                         \nBMC_BRD >> Mfr:Supermicro  Name:              Part:X10DRU-i+        Ser:OM15CS034412            Date:Sun Dec 31 16:00:00 1995 \nBMC_CHS >> Typ:01                             Part:CSE-119UTS-R751  Ser:C119UAF03B20282         FRU_ver:      SDR_ver:    \n--------------------------------------------------------------------------------------------------------------------------------\nFAN     >> F1:14600  F2:14100  F3:13900  F4:14900  F5:14300  F6:14900  F7:15200  F8:14000  \n--------------------------------------------------------------------------------------------------------------------------------\nPS0     >> Mfr:SUPERMICRO Mdel:PWS-751P-1R  Rev:1.0   Watt:750W  Ser:P751PCF49A03098 Slt:PSU1   Sta:Present,OK Plg:Yes Rpl:Yes\nPS1     >> Mfr:SUPERMICRO Mdel:PWS-751P-1R  Rev:1.0   Watt:750W  Ser:P751PCF49A03099 Slt:PSU2   Sta:Present,OK Plg:Yes Rpl:Yes\n--------------------------------------------------------------------------------------------------------------------------------\nSUM HW  >> CPU Ins=2, Skt=2, LPJ=2199 | MEM Sze=264038908KB, Ins=8, Slt=24 | DSK=10 | NVME=0 | PCI=8 | LAN=4 | GPU=0 | FAN=8\nSUM CM  >> KER:3.10.0-327 IMG:r72 CVER:7.2||DIR=sysv/longn/x10dru-i+/bios2018-01-10/onoff1|MDELT=90|ONOFF=1|\n================================================================================================================================\n'''\n\n#hddRegex = re.compile(r'Mf:(.*)\\s+Md:(.*)\\s+Sz:(.*)\\s+Fw:(.*)\\s+Bus:(.*)\\s+Ser:(.*)\\s+')\n#need to remove the extra spaces somehow\n#hddRegex = re.compile(r'Md:(.*?)\\s+') #works, but freaking Intel SSD truncated after Intel\n#hddRegex = re.compile(r'Md:(.*?)\\s{2,}') #works! if there's more than 2 space, then it cuts off\n#hddRegex = re.compile(r'Mf:(.*?)\\s{2,}Md:(.*?)\\s{2,}Sz:(.*?)\\sFw:(.*?)\\s{2,}Bus:(.*?)\\s{2,}Ser:(.*?)\\s{2,}')\n\ndef info(self):\n    hdd = str(self) + ' Info'\n    newhdd = hdd.center(40,'=')\n    print(str(newhdd))\n\ninfo('HDD')\nhddRegex = re.compile(r'(HDD\\d+).*(sd\\w+).*Mf:(.*?)\\s{2,}Md:(.*?)\\s{2,}Sz:(.*?)\\sFw:(.*?)\\s{2,}.*Ser:(.*?)\\s+')\npprint.pprint(hddRegex.findall(data))\n#ohhh yeah baby, i figured it out. so proud. *smug face*\n#still, how do i indent a regex? :|, the string is getting super long\n\ninfo('DIMM')\ndimmRegex = re.compile(r'(DIMM\\d+).*(P\\d-DIMM\\w+).*Sz:(.*?)\\s+Typ:(DDR\\d).*Spd:(.*:.*)\\s+Mfr:(\\w+).*Mdl:(.*?)\\s+')\npprint.pprint(dimmRegex.findall(data))\n\ninfo('LAN')\nlanRegex = re.compile(r'(LAN\\d+).*(eth\\d+)\\s+IP:(.*?)\\s+Mac:(.*?).\\s+eep:(.*?)\\s+.*Drv:(.*?)\\s+Spd:(.*?)\\s')\npprint.pprint(lanRegex.findall(data))\n\ninfo('BMC')\nbmcRegex = re.compile(r'BMC.*IP:(.\\S*).*Mac:(.\\S*).*Fw:(.\\S*).*')\npprint.pprint(bmcRegex.findall(data))\n\n#for LAN I used (.*?)\\s+ , and for BMC I used (.\\S*).* . both do the same thing, but differently :/\n",
-			"file": "labdata_regex.py",
-			"file_size": 8604,
-			"file_write_time": 131601873983356919,
+			"file": "regex.py",
 			"settings":
 			{
-				"buffer_size": 8509,
+				"buffer_size": 4448,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dryrun.py",
+			"settings":
+			{
+				"buffer_size": 573,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "walking_directory_tree.py",
+			"settings":
+			{
+				"buffer_size": 1011,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "#! \n\n# temp\n\nimport os\n",
+			"file": "temp.py",
+			"file_size": 17,
+			"file_write_time": 131617234007340817,
+			"settings":
+			{
+				"buffer_size": 23,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "box.py",
+			"settings":
+			{
+				"buffer_size": 339,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -36,21 +86,29 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 137.0,
-		"last_filter": "install",
+		"height": 170.0,
+		"last_filter": "git push",
 		"selected_items":
 		[
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"pack",
-				"Package Control: Install Package"
-			],
-			[
 				"git push",
 				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git quick",
+				"Git: Quick Add"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git qui",
+				"Git: Quick Add"
 			],
 			[
 				"git commit",
@@ -61,8 +119,32 @@
 				"Git: Quick Add"
 			],
 			[
+				"git diff",
+				"Git: Diff"
+			],
+			[
+				"git  quick",
+				"Git: Quick Add"
+			],
+			[
 				"git comm",
 				"Git: Commit"
+			],
+			[
+				"git q",
+				"Git: Quick Add"
+			],
+			[
+				"repl",
+				"SublimeREPL: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
 			],
 			[
 				"git: add",
@@ -141,7 +223,18 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Isador/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
 		"/C/Users/Isador/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/C/Users/Isador/AppData/Roaming/Sublime Text 3/Packages/User/Main.sublime-menu",
+		"/S/Desktop/transfer/automatetheboringstuff/shutil.py",
+		"/S/Desktop/transfer/automatetheboringstuff/regex2.py",
+		"/S/Desktop/transfer/automatetheboringstuff/regexphone.py",
+		"/S/Desktop/transfer/automatetheboringstuff/parsing.py",
+		"/S/Desktop/transfer/automatetheboringstuff/filepath.py",
+		"/S/Desktop/transfer/automatetheboringstuff/playlistedit.py",
+		"/S/Desktop/transfer/automatetheboringstuff/regex.py",
+		"/S/Desktop/transfer/automatetheboringstuff/labdata_regex.py",
+		"/S/Desktop/transfer/automatetheboringstuff/regex..py",
 		"/S/Desktop/transfer/automatetheboringstuff/sublimegittest.py",
 		"/S/Desktop/transfer/automatetheboringstuff/if_else_example.py",
 		"/S/Desktop/transfer/automatetheboringstuff/if_elif_example.py",
@@ -158,7 +251,6 @@
 		"/S/Desktop/transfer/automatetheboringstuff/ifexample.py",
 		"/S/Desktop/transfer/automatetheboringstuff/phone.py",
 		"/S/Desktop/transfer/automatetheboringstuff/plusOne.py",
-		"/S/Desktop/transfer/automatetheboringstuff/regex.py",
 		"/S/Desktop/transfer/automatetheboringstuff/showinglistsreference.py",
 		"/S/Desktop/transfer/automatetheboringstuff/sysexit.py",
 		"/S/Desktop/transfer/automatetheboringstuff/test.py",
@@ -215,7 +307,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -224,15 +316,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1078,
+						"buffer_size": 1495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1078,
-								1078
+								1495,
+								1495
 							]
 						],
 						"settings":
@@ -243,24 +335,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "labdata_regex.py",
+					"file": "regex.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8509,
+						"buffer_size": 4448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8509,
-								8509
+								0,
+								0
 							]
 						],
 						"settings":
@@ -268,12 +360,129 @@
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "dryrun.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 573,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								573,
+								573
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "walking_directory_tree.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								779,
+								779
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "temp.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "box.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 339,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -294,6 +503,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -304,6 +519,7 @@
 		"rows":
 		[
 			0.0,
+			0.719459459459,
 			1.0
 		]
 	},
@@ -326,7 +542,7 @@
 	},
 	"output.git-push":
 	{
-		"height": 103.0
+		"height": 28.0
 	},
 	"output.git-remote":
 	{

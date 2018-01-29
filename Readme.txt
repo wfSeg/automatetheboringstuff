@@ -23,3 +23,9 @@ This is cool and all, but now I need to figure out how to run python in sublime,
 3. (optional) View > Layout > Rows:2. So you can put python console on the bottome row by dragging the tab to it
 4. You get the tab by CSP, launch "SublimeREPL:Python"
 5. To run your current code, hold CTRL+, then release both, then press F
+
+SublimeREPL
+1. Annoying thing to remember - if you close Sublime, and open it again, need to re-open sublimeREPL for python
+2. Tools - SublimeREPL - Python - 'Python - IPython'
+3. Then you can start running code in Sublime
+4. Shortcut is "CTRL" + "," <- comma. Let go of both, the press "f"
